@@ -1,0 +1,69 @@
+<!-- HTML -->
+<div class="image-item">
+    <div class="image image-hover-fx">
+        <img src="images/sample-img.jpg" alt="">
+        <div class="image-overlay"></div>
+        <a href="<?php echo home_url( '/' ); ?>" class="portfolio-zoom"><i class="fa fa-eye"></i></a>
+    </div>
+</div>
+
+<!-- SASS -->
+<style type="text/css">
+.image
+    display: block
+    height: 190px
+    margin-bottom: 20px
+    overflow: hidden
+    img
+        position: absolute
+        width: 100%
+        min-height: 100%
+    
+
+.image-hover-fx
+    position: relative
+    overflow: hidden
+
+    .image-overlay 
+        background-color: $clrPrimary
+        width: 100%
+        height: 100%
+        display: block
+        position: absolute
+        top: 0
+        left: 0
+        opacity: 0
+        filter: alpha(opacity=0)
+        -webkit-transition: all 0.2s ease
+        transition: all 0.2s ease
+
+    .portfolio-zoom 
+        width: 65px
+        height: 65px
+        text-align: center
+        background-color: $clrDark
+        display: none
+        line-height: 65px
+        position: absolute
+        top: 50%
+        left: -65px
+        margin-top: -22px
+        font-size: 30px
+        color: #fff
+        display: block
+        border-radius: 2px
+        &:hover
+            background: $clrPrimary
+
+// Hover Effects
+.image-item:hover .image-hover-fx .image-overlay 
+    opacity: 0.50
+    filter: alpha(opacity=50)
+
+.image-item:hover .image-hover-fx .portfolio-zoom 
+    display: block
+    left: 50%
+    margin-left: -35px
+    -webkit-transition: all 0.2s ease
+    transition: all 0.2s ease
+</style>

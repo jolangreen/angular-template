@@ -1,0 +1,23 @@
+[
+    {
+        "name" : "Jonny",
+        "location" : "Toronto, CA",
+        "email" : "jandreola@pm.com",
+        "url" : "http://jonnyandreola.ca",
+        "birthday": "May 9, 1983"
+    },
+    {
+        "name" : "Leonardo",
+        "location" : "Tijuana, MX",
+        "email" : "lsanchez@pm.com",
+        "url" : "http://leosanchez.ca",
+        "birthday": "May 30, 1983"
+    },
+    {
+        "name" : "Vanessa",
+        "location" : "Beirut, Lebanon",
+        "email" : "v-is-suck@pm.com",
+        "url" : "http://v-is-suck.ca",
+        "birthday": "August 1, 1971"
+    }
+]

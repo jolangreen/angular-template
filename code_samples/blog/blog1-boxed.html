@@ -1,0 +1,103 @@
+
+<article>
+    <a href="#" class="post-img"><img src="images/headers/banner2.jpg" class="post-image img-responsive" alt=""></a>
+
+    <div class="post-content">
+        <h2>Article Post Title</h2>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate sunt in culpa qui officia deserunt mollit anim id est laborum ...
+        </p>
+
+        <a href="#" class="btn">Read more</a>
+    </div>
+
+    <div class="post-info">
+        <div class="row">
+            <div class="col-md-8">
+                <ul>
+                    <li><span class="glyphicon glyphicon-time"></span> January 15</li>
+                    <li><span class="glyphicon glyphicon-user"></span> John Doe</li>
+                    <li><span class="glyphicon glyphicon-pencil"></span> design</li>
+                </ul>
+            </div> <!-- end col-md-8 -->
+            <div class="col-md-4">
+                <ul class="pull-right">
+                    <li><span class="glyphicon glyphicon-heart"></span> 117</li>
+                    <li><span class="glyphicon glyphicon-comment"></span> 57</li>
+                </ul>
+            </div> <!-- end col-md-4 -->
+        </div> <!-- end row -->
+    </div> <!-- end post-info -->
+</article>
+
+<!-- PHP SINGLE -->
+<article>
+    <a href="<?php the_permalink(); ?>" class="post-img">
+        <?php the_post_thumbnail(); ?>
+    </a>
+
+    <div class="post-content">
+        <h2><?php the_title(); ?></h2>
+
+        <p><?php echo substr($post->post_content, 0, 150) ?>...</p>
+
+        <a href="<?php the_permalink(); ?>" class="btn">Read more</a>
+    </div>
+
+    <div class="post-meta">
+        <div class="row">
+            <div class="col-md-8">
+                <ul>
+                    <li><span class="glyphicon glyphicon-time"></span> <?php the_time('F j, Y'); ?></li>
+                    <?php if ( is_single() && get_the_author_meta( 'description' ) && is_multi_author() ) : ?>
+                        <li><span class="glyphicon glyphicon-user"></span> <?php get_template_part( 'author-bio' ); ?></li>
+                    <?php endif; ?>
+                    <li><span class="glyphicon glyphicon-pencil"></span> <?php the_category(); ?></li>
+                </ul>
+            </div> <!-- end col-md-8 -->
+            <div class="col-md-4">
+                <ul class="pull-right">
+                    <li><span class="glyphicon glyphicon-heart"></span> 117</li>
+                    <li><span class="glyphicon glyphicon-comment"></span> 57</li>
+                </ul>
+            </div> <!-- end col-md-4 -->
+        </div> <!-- end row -->
+    </div> <!-- end post-info -->
+</article>
+
+
+<!-- CSS BLOG -->
+/* Blog */
+.blog article
+    margin-bottom: 80px
+    border: 1px solid $clrLight
+    border-radius: 8px
+    overflow: hidden
+
+    article a.post-img
+        display: block
+        overflow: hidden
+        height: 350px
+
+        img
+            width: 100%
+
+    .post-content
+        padding: 30px 20px
+
+    .post-meta
+        background: #fafcfc
+        border-top: 1px solid $clrLight
+        padding: 10px 20px
+        color: #979ba3
+        font-size: 12px
+
+        ul
+            margin: 0
+            padding: 0
+
+            li
+                list-style: none
+                display: inline
+                margin-right: 24px
+

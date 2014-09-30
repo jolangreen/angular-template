@@ -1,0 +1,81 @@
+
+// LOGO LEFT, NAV RIGHT, SEARCH
+
+.top
+    height: 40px
+    background: $clrLight
+
+.navbar-form
+    margin-top: 6px
+    margin-bottom: 6px
+    input[type="text"]
+        width: 200px
+        border-radius: 5px
+        height: auto !important
+        +transition(all 0.4s ease-in-out)
+        &:focus
+            width: 250px
+    i
+        top: 0px
+        position: relative
+        left: -28px
+        color: $clrMuted
+    input[type="submit"]
+        background: $clrPrimary
+        margin-left: -12px
+        height: 28px
+        padding: 2px 8px
+
+
+header
+    .navbar
+        margin-bottom: 0
+        padding: 20px 0
+
+    .container
+        position: relative
+
+        h1
+            margin: 0
+            line-height: 0
+
+        h1 a.logo
+            display: block
+            float: left
+            left: 0
+            width: 200px
+            height: 50px
+            background: image-url("logo.png") no-repeat
+
+// Navigation
+nav
+    background: $clrBackground
+
+    a
+        color: $clrText
+        &:hover
+            color: $clrBrightest
+            text-decoration: none
+
+    .nav li
+        display: inline-block
+        position: relative
+
+    .nav > li > a
+        padding: 15px 15px
+        &:hover
+            background-color: $clrSecondary
+            text-decoration: none
+
+    /*Active State */
+    .nav
+        .current_page_item > a,
+        .current_page_ancestor > a,
+        .current-menu-item > a,
+        .current-menu-ancestor > a
+            color: $clrDark
+            font-weight: bold
+            text-decoration: none
+
+    button.navbar-toggle
+        background-color: $clrPrimary

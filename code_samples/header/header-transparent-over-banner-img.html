@@ -1,0 +1,39 @@
+<header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header">
+                <h1><a href="<?php echo home_url( '/' ); ?>" class="logo"></a></h1>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse pull-right">
+               <ul id="menu-header-menu" class="nav navbar-nav">
+                    <li class="current-menu-item"><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+<!-- SASS -->
+header
+    position: absolute
+    z-index: 2000
+    width: 100%
+
+nav
+    background: transparent
+
+    a, a:visited
+        color: $clrBrightest
+        &:hover
+            color: $clrBrightest
+            text-decoration: none

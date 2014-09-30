@@ -1,0 +1,51 @@
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+// Define our font
++font-face("robotoregular", font-files("roboto-regular-webfont.eot", "roboto-regular-webfont.eot?#iefix", "roboto-regular-webfont.woff", "roboto-regular-webfont.ttf", "roboto-regular-webfont.svg#robotoregular"))
+
++font-face("HelveticaNeueThin", font-files("hlt____-webfont.eot", "hlt____-webfont.eot?#iefix", "hlt____-webfont.woff", "hlt____-webfont.ttf", "hlt____-webfont.svg#HelveticaNeueThin"))
+
+
+// Custom Text Highlight
+::selection
+    background: $clrPrimary
+    color: $clrBackground
+    text-shadow: none
+
+::-webkit-selection
+    background: $clrPrimary
+    color: $clrBackground
+    text-shadow: none
+
+::-moz-selection
+    background: $clrPrimary
+    color: $clrBackground
+    text-shadow: none
+
+// Headings
+h1, h2, h3, h4, h5, h6
+    font-family: $fontSecondary
+    color: $clrPrimary
+    font-weight: normal
+    margin-top: 0
+
+h1
+    font-size: 40px
+    margin-bottom: 25px
+
+h2
+    font-size: 36px
+    color: $clrDark
+    margin-bottom: 15px
+
+h3
+    font-size: 28px
+    color: $clrDark
+    margin-bottom: 7px
+    font-weight: bold
+
+p
+    margin-bottom: 20px

@@ -1,0 +1,44 @@
+{
+  "name": "template_theme",
+  "version": "0.0.0",
+  "description": "This is a test",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.8.6",
+    "gulp-autoprefixer": "^0.0.8",
+    "gulp-ruby-sass": "^0.6.0",
+    "gulp-sass": "^0.7.2",
+    "wiredep": "^1.8.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.7",
+    "gulp-autoprefixer": "0.0.8",
+    "gulp-bower-src": "^0.1.0",
+    "gulp-cache": "^0.2.0",
+    "gulp-clean": "^0.3.1",
+    "gulp-compass": "^1.2.0",
+    "gulp-concat": "^2.3.3",
+    "gulp-imagemin": "^0.6.1",
+    "gulp-jshint": "^1.7.1",
+    "gulp-livereload": "^2.1.0",
+    "gulp-minify-css": "^0.3.6",
+    "gulp-notify": "^1.4.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-ruby-sass": "^0.6.0",
+    "gulp-sass": "^0.7.2",
+    "gulp-uglify": "^0.3.1",
+    "main-bower-files": "^2.0.0"
+  },
+  "scripts": {
+    "test": "none"
+  },
+  "repository": {
+    "type": "git",
+    "url": "jolangreen"
+  },
+  "keywords": [
+    "none"
+  ],
+  "author": "Jolan Green",
+  "license": "ISC"
+}

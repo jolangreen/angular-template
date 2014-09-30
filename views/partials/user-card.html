@@ -1,0 +1,24 @@
+<div class="well well-sm">
+    <div class="row">
+        <div class="col-sm-6 col-md-4">
+            <img src="http://placehold.it/380x500" alt="" class="img-rounded img-responsive" />
+        </div>
+        <div class="col-sm-6 col-md-8">
+            <!--
+                * Making use of our filter called addPoop that was defined
+                * on our filters.js file.
+                *                 |
+                *                 |
+                *                 V
+             -->
+            <h4>{{ user.name | addPoop }}</h4>
+            <small> {{ user.location }} <i class="glyphicon glyphicon-map-marker"></i></small>
+            <p>
+                <i class="glyphicon glyphicon-envelope"></i> {{ user.email }}
+                <br />
+                <i class="glyphicon glyphicon-globe"></i><a href="{{ user.url }}"> {{ user.url }}</a>
+                <br />
+                <i class="glyphicon glyphicon-gift"></i> {{ user.birthday }}</p>
+        </div>
+    </div>
+</div>

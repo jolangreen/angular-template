@@ -1,0 +1,132 @@
+<!-- HEAD -->
+<link href="css/animations.css" rel="stylesheet" type="text/css" />
+
+<!-- HTML -->
+<section class="banner">
+    <div id="myCarousel" class="carousel slide">
+        <div class="tint"></div>
+        <!-- <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol> -->
+        <!-- Carousel items -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <img id="parallaxed" src="images/headers/banner1.jpg">
+
+                <div class="carousel-caption">
+                    <h1>This Is Sample Text</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, autem suscipit itaque.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+
+            </div>
+            <div class="item" >
+                <img src="images/headers/banner2.jpg">
+            </div>
+        </div>
+        <!-- Carousel nav -->
+        <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="carousel-control right" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+
+        <a href="#next" class="block-icon-o down-button floating"><i class="fa fa-chevron-down"></i></a>
+    </div>
+</section>
+
+<!-- SASS -->
+.banner
+    overflow: hidden
+    position: relative
+    
+
+.carousel
+    margin-bottom: 60px
+
+    .container
+        position: relative
+        z-index: 9
+
+    .tint
+        background: rgba(0, 0, 0, .5)
+        width: 100%
+        height: 100%
+        position: absolute
+        z-index: 1
+
+    .down-button
+        position: absolute
+        bottom: 40px
+        left: 47.5%
+        z-index: 10
+        width: 80px
+        height: 80px
+        line-height: 80px
+        font-size: 30px
+        color: $clrBrightest
+
+    .item
+        height: $bannerHeight
+
+        img
+            position: absolute
+            top: 0
+            left: 0
+            min-width: 100%
+            height: 100%
+
+    .carousel-caption
+        background-color: transparent
+        width: 600px
+        margin: 0 auto
+        top: 30%
+
+        h1, .carousel-caption p
+            margin: 0
+            line-height: 1.25
+            color: #fff
+            text-shadow: 0 1px 1px rgba(0,0,0,.4)
+
+        h1
+            font-size: 50px
+        p
+            font-size: 22px
+        a.btn
+            padding: 10px 20px
+            font-size: 20px
+            text-transform: uppercase
+            background-color: transparent
+            border: 2px solid $clrBrightest
+            color: $clrBrightest
+            margin-top: 15px
+
+
+    .carousel-control
+        z-index: 5
+
+        .glyphicon-chevron-left, .glyphicon-chevron-right
+            top: 44%
+            background: $clrDark
+            height: 80px
+            width: 50px
+            line-height: 77px
+            color: $clrBrightest
+
+        .glyphicon-chevron-left
+            left: 0
+        .glyphicon-chevron-right
+            right: 0
+
+
+<!-- JAVASCRIPT -->
+//Full Height
+$(function(){
+    $('.item') .css({'height': (($(window).height()))+'px'});
+    $(window).resize(function(){
+        $('.item') .css({'height': (($(window).height()))+'px'});
+    });
+});

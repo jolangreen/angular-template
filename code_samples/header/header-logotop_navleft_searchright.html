@@ -1,0 +1,127 @@
+<header>
+    <nav class="navbar">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="container">
+                    <h1><a href="<?php echo home_url( '/' ); ?>" class="logo"></a></h1>
+                </div>
+            </div>
+        </div>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse">
+           <div class="container">
+               <form action="#" class="navbar-form pull-right" id="searchform" method="get">
+                    <input type="text" placeholder="Search" id="s" name="s" class="field input-medium search-query">
+                    <i class="fa fa-search"></i>
+                    <input type="submit" class="search-submit" value="Go">
+                </form>
+               <ul id="menu-header-menu" class="nav">
+                    <li class="current-menu-item"><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- SASS -->
+header
+    padding-top: 15px
+    .container
+        position: relative
+        text-align: center
+
+        h1
+            margin: 0
+            line-height: 0
+
+        h1 a.logo
+            display: block
+            left: 0
+            width: 100%
+            height: 180px
+            background: image-url("logo.png") no-repeat center #f1f1f1
+            margin-bottom: 15px
+            margin: 0 auto
+
+.navbar-form
+    margin-top: 19px
+    margin-bottom: 6px
+    input[type="text"]
+        width: 200px
+        border-radius: 5px
+        height: auto !important
+        +transition(all 0.4s ease-in-out)
+        &:focus
+            width: 250px
+    i
+        top: 0px
+        position: relative
+        left: -28px
+        color: $clrMuted
+    input[type="submit"]
+        background: $clrPrimary
+        margin-left: -12px
+        height: 28px
+        padding: 2px 8px
+
+// Navigation
+nav
+    background: $clrBackground
+    text-align: center
+
+    a, a:visited
+        color: $clrLight
+    
+    //Adjust Nav Bar BG Color
+    .navbar-collapse
+        background: $clrMutedDark
+
+    .nav li
+        float: left
+        position: relative
+        list-style: none
+
+    .nav > li > a
+        padding: 15px 8px
+        text-transform: uppercase
+        font-size: 17px
+        &:after
+            content: "|"
+            color: $clrText
+            margin-left: 22px
+        &:after:last-of-type
+            content: ""
+        &:hover
+            background: transparent
+            color: $clrPrimary
+            text-decoration: none
+
+    .nav
+        margin: 6px 0
+            
+    /*Active State */
+    .nav
+        .current_page_item > a,
+        .current_page_ancestor > a,
+        .current-menu-item > a,
+        .current-menu-ancestor > a
+            color: $clrBrightest
+            font-weight: bold
+            text-decoration: none
+
+    button.navbar-toggle
+        background-color: $clrPrimary
+
+.navbar
+    margin-bottom: 0

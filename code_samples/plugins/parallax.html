@@ -1,0 +1,36 @@
+<!-- HEAD -->
+<link rel="stylesheet" type="text/css" href="css/parallax.css" data-skrollr-stylesheet />
+
+
+<!-- HTML -->
+			<div class="item active">
+                <img id="parallaxed" src="images/headers/banner1.jpg">
+
+                <div class="carousel-caption">
+                    <h1>This Is Sample Text</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, autem suscipit itaque.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+
+            </div>
+
+
+<!-- CSS -->
+#parallaxed { -skrollr-animation-name: parallaxed; }
+
+@-skrollr-keyframes parallaxed { 
+	10 { 
+		top: 0%; 
+	}
+  	600 { 
+	  	top: 45%; 
+	  } 
+}
+
+
+<!-- JAVASCRIPT -->
+<script src="js/skrollr.min.js"></script>
+<script src="js/skrollr.stylesheets.min.js"></script>
+<script type="text/javascript">
+    var s = skrollr.init();
+</script>

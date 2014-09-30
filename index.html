@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <title>UntitledCompany</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0">
+
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body ng-app="myApp" ng-controller="BaseController">
+
+<!-- Header
+================================================== -->
+<header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header">
+                <h1><a href="index.html" class="logo"></a></h1>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse pull-right">
+               <ul id="menu-header-menu" class="nav navbar-nav">
+                    <li ng-class="menuClass('')"><a href="/#/">Home</a></li>
+                    <li ng-class="menuClass('about')"><a href="/#/about">About</a></li>
+                    <li ng-class="menuClass('services')"><a href="/#/services">Services</a></li>
+                    <li ng-class="menuClass('contact')"><a href="/#/contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- Banner
+================================================== -->
+<section id="banner">
+    <div id="myCarousel" class="carousel slide">
+        <div class="tint"></div>
+        <!-- <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol> -->
+        <!-- Carousel items -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <img id="parallaxed" src="images/banner1.jpg">
+
+                <div class="carousel-caption">
+                    <h1>This Is Sample Text</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, autem suscipit itaque.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+
+            </div>
+            <div class="item" >
+                <img src="images/banner2.jpg">
+            </div>
+        </div>
+        <!-- Carousel nav -->
+        <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="carousel-control right" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+
+        <a href="#main" class="block-icon-o down-button floating"><i class="fa fa-chevron-down"></i></a>
+    </div>
+</section>
+
+
+<!-- Main Content
+================================================== -->
+<div ng-view id="main">
+    <!-- Our views (pages) will be shown inside the ng-view tag -->
+</div>
+<div class="clear"></div>
+
+
+<!-- Footer 
+================================================== -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <ul>
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">services</a></li>
+                    <li><a href="#">contact</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-6 social">
+                <a href="#" class="block-icon"><i class="fa fa-facebook"></i></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+                <a href="#" class="fa fa-pinterest"></a>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-lg-12 copyright">
+                &copy; 2014 UntitledCompany. All Rights Reserved.
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular-route.min.js"></script>
+<script src="assets/js/scripts.js"></script>
+
+<script src="js/app.js"></script>
+<script src="js/controllers.js"></script>
+<script src="js/services.js"></script>
+<script src="js/filters.js"></script>
+<script src="js/directives.js"></script>
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+
+</body>
+</html>

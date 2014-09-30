@@ -1,0 +1,50 @@
+<div class="secondary col-md-4">
+    <aside>
+        <h3>Sample Title</h3>
+        <ul class="menu">
+            <li class="current-menu-item"><a href="#">Product Category</a></li>
+            <li><a href="#">Product Category</a></li>
+            <li><a href="#">Product Category</a></li>
+            <li><a href="#">Product Category</a></li>
+        </ul>
+    </aside>
+</div><!-- /.col4 #secondary -->
+
+
+<!-- CSS -->
+.secondary
+    aside
+        margin-bottom: 30px
+    h3
+        color: $clrText
+        margin-bottom: 5px
+    ul
+        padding-left: 0
+        margin-left: 0
+        margin-bottom: 35px
+    ul li
+        list-style: none
+        border-bottom: 1px solid $clrLight
+        line-height: 40px
+        margin-bottom: 0
+        a
+            color: $clrText
+            &:hover
+                color: $clrPrimary
+                text-decoration: none
+
+        &.current_page_item > a,
+        &.current_page_ancestor > a,
+        &.current-menu-item > a,
+        &.current-menu-ancestor > a
+            color: $clrPrimary
+
+        ul ul li
+            border-bottom: none
+            line-height: 30px
+            padding-left: 20px
+
+    // li:before   
+    //     font-family: 'FontAwesome'
+    //     content: '\f105'
+    //     margin: 0 10px 0 -15px

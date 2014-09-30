@@ -1,0 +1,40 @@
+<footer>
+    <div class="container">
+        <ul>
+            <li><a href="#">home</a></li>
+            <li><a href="#">sample</a></li>
+            <li><a href="#">sample</a></li>
+            <li><a href="#">sample</a></li>
+            <li><a href="#">sample</a></li>
+            <li><a href="#">sample</a></li>
+        </ul>
+        <div class="text-muted">
+            &copy; <?=date('Y')?> UntitledCompany. All Rights Reserved.
+        </div>
+    </div>
+</footer>
+
+<!-- SASS -->
+footer
+    background: $clrBackground
+
+    .container
+        position: relative
+        border-top: 1px solid $clrLight
+        padding: 15px 0
+        text-align: center
+
+    ul
+        padding-left: 0
+        
+        li
+            display: inline-table
+            list-style: none
+            a
+                color: $clrText
+                text-decoration: none
+                padding: 0 10px
+
+                &:hover
+                    color: $clrPrimary
+                    text-decoration: underline
