@@ -5,7 +5,7 @@
   "authors": [
     "jolangreen <jolangreen@hotmail.com>"
   ],
-  "description": "Bootstrap, Gulp, Bower, Wordpress Theme",
+  "description": "Bootstrap, Gulp, Bower, Theme",
   "main": "index.html",
   "keywords": [
     "none"
@@ -30,7 +30,9 @@
   "dependencies": {
     "bootstrap": "~3.2.0",
     "jquery": "~2.1.1",
-    "fontawesome": "~4.1.0"
+    "fontawesome": "~4.1.0",
+    "angular": "~1.2.25",
+    "angular-route": "~1.2.25"
   }
   
 }
