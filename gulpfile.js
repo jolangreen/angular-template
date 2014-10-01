@@ -27,7 +27,7 @@ gulp.task('styles', function() {
    gulp.src('sass/*.scss')
      .pipe(compass({ config_file: './config.rb', css: 'assets/css', sass: 'sass' }))
      .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
-     .pipe(gulp.dest(''))
+     .pipe(gulp.dest('assets/css'))
      .pipe(livereload())
      .pipe(rename({suffix: '.min'}))
      .pipe(minifycss({ keepSpecialComments: 1 }))
@@ -56,6 +56,13 @@ gulp.task('images', function() {
     .pipe(notify({ message: 'Images task complete' }));
 });
 
+//Take neccessary files from bower_components and move to 'assets'
+gulp.task('bowermove', function() {
+  return gulp.src(mainBowerFiles(), {
+      base: 'bower_components'
+    })
+    .pipe(gulp.dest('assets'));
+});
 
 // Clean. Delete and replace all files in the destination folder.
 gulp.task('clean', function() {
@@ -75,14 +82,6 @@ gulp.task('bower', function () {
 });
 */
 
-//Take neccessary files from bower_components and move to 'assets'
-
-gulp.task('bowermove', function() {
-  return gulp.src(mainBowerFiles(), {
-      base: 'bower_components'
-    })
-    .pipe(gulp.dest('assets'));
-});
 
 
 // Default task
