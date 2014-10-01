@@ -130,17 +130,19 @@ nav
         padding: 8px 15px
         +border-radius(10px)
         text-transform: uppercase
+        margin-left: 5px
         &:hover
             background-color: $clrPrimary
 
     /*Active State */
     .nav
+        .active > a,
         .current_page_item > a,
         .current_page_ancestor > a,
         .current-menu-item > a,
         .current-menu-ancestor > a
             color: $clrBrightest
-            font-weight: bold
+            background-color: $clrPrimary
             text-decoration: none
 
     button.navbar-toggle
