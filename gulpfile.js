@@ -17,8 +17,7 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     notify = require('gulp-notify'),
     cache = require('gulp-cache'),
-    livereload = require('gulp-livereload'),
-    mainBowerFiles = require('main-bower-files');
+    livereload = require('gulp-livereload');
     //wiredep = require('wiredep').stream;
 
 
@@ -56,13 +55,20 @@ gulp.task('images', function() {
     .pipe(notify({ message: 'Images task complete' }));
 });
 
-//Take neccessary files from bower_components and move to 'assets'
-gulp.task('bowermove', function() {
-  return gulp.src(mainBowerFiles(), {
-      base: 'bower_components'
-    })
-    .pipe(gulp.dest('assets'));
+
+//Move 'bower_components' styles to 'assets'
+gulp.task('bowerstyles', function() {
+  gulp.src(['./bower_components/bootstrap/dist/css/bootstrap.css', './bower_components/fontawesome/css/font-awesome.css'])
+  .pipe(gulp.dest('./assets/css'));
 });
+
+//Move 'bower_components' fonts to 'assets'
+gulp.task('bowerfonts', function() {
+  gulp.src(['./bower_components/bootstrap/dist/fonts/**/*.{ttf,woff,eot,svg,otf}', './bower_components/fontawesome/fonts/**/*.{ttf,woff,eot,svg,otf}', './fonts/**/*.{ttf,woff,eot,svg,otf}'])
+  .pipe(gulp.dest('./assets/fonts'));
+});
+
+
 
 // Clean. Delete and replace all files in the destination folder.
 gulp.task('clean', function() {
@@ -70,23 +76,12 @@ gulp.task('clean', function() {
     .pipe(clean());
 });
 
-//Automatically Add dependencies to your source code
-/*
-gulp.task('bower', function () {
-  gulp.src(['./header.php', './footer.php', './index-temp.html'])
-    .pipe(wiredep({
-      optional: 'configuration',
-      goes: 'here'
-    }))
-    .pipe(gulp.dest('./'));
-});
-*/
 
 
 
 // Default task
 gulp.task('default', ['clean'], function() {
-    gulp.start('styles', 'scripts', 'images', 'bowermove');
+    gulp.start('styles', 'scripts', 'images', 'bowerstyles', 'bowerfonts');
 });
 
 
