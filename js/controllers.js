@@ -27,8 +27,28 @@ myApp.controller('BaseController', ['$scope', '$location', function($scope, $loc
 /////////////////////
 myApp.controller('HomeController', ['$scope', function($scope){
 
+
+    $scope.imgs = [
+        {
+            title: 'First Image',
+            src: 'assets/images/sample-img.jpg',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam adipiscing, metus eu imperdiet ornare, urna lorem porttitor tortor, at condimentum massa erat sed sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam adipiscing.'
+        },
+        {
+            title: 'Second Image',
+            src: 'assets/images/sample-img.jpg',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam adipiscing, metus eu imperdiet ornare, urna lorem porttitor tortor, at condimentum massa erat sed sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam adipiscing.'
+        },
+        {
+            title: 'Third Image',
+            src: 'assets/images/sample-img.jpg',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam adipiscing, metus eu imperdiet ornare, urna lorem porttitor tortor, at condimentum massa erat sed sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam adipiscing.'
+        },
+    ];
+
     // Contents for the first post, whatever property you
-    // assign to $scope object will be available on your view (html file)
+    // assign to $scope object will be  available on your view (html file)
+
     $scope.title = 'Hello, this is your home page';
     $scope.content = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.';
     $scope.createdAt = '19852024524';
