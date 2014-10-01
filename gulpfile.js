@@ -86,7 +86,7 @@ gulp.task('bower', function () {
 
 // Default task
 gulp.task('default', ['clean'], function() {
-    gulp.start('styles', 'scripts', 'images');
+    gulp.start('styles', 'scripts', 'images', 'bowermove');
 });
 
 
