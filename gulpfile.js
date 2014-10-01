@@ -37,7 +37,7 @@ gulp.task('styles', function() {
 
 //Scripts
 gulp.task('scripts', function() {
-  gulp.src(['bower_components/jquery/dist/jquery.min.js', 'bower_components/bootstrap/dist/js/bootstrap.min.js', 'js/*.js'])
+  gulp.src(['bower_components/angular/angular.js', 'bower_components/angular-route/angular-route.js', 'bower_components/jquery/dist/jquery.min.js', 'bower_components/bootstrap/dist/js/bootstrap.min.js', 'js/*.js'])
     //.pipe(jshint('.jshintrc'))
     .pipe(jshint.reporter('default'))
     .pipe(concat('scripts.js'))
