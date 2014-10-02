@@ -1,6 +1,7 @@
-<h1>All users</h1>
+<div class="container">
 
-<div class="row">
+<h1>Services</h1>
+
 <!--
       Using the new element the we created called user-card
       note the our directive's name is userCard (camelCase)
@@ -11,7 +12,73 @@
       |
       |
       V                                                    -->
-    <user-card ng-repeat="user in users" class="col-md-4">
-        <!-- Contents from userCard directive will be placed in here -->
-    </user-card>
+
+
+        <div class="services-list">
+            <div class="row">
+                <div class="col-md-1">
+                    <div class="services-icon center block-icon medium">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                    </div> <!-- end services-icon -->
+                </div>
+                <div class="col-md-3">
+                    <h4>modern design</h4>
+                    <p>I am a member of the Imperial Senate on a diplomatic mission to Alderaan.</p>
+                </div>
+
+                <div class="col-md-1">
+                    <div class="services-icon center block-icon medium">
+                        <span class="glyphicon glyphicon-wrench"></span>
+                    </div> <!-- end services-icon -->
+                </div>
+                <div class="col-md-3">
+                    <h4>web development</h4>
+                    <p>I am a member of the Imperial Senate on a diplomatic mission to Alderaan.</p>
+                </div>
+
+                <div class="col-md-1">
+                    <div class="services-icon center block-icon medium">
+                        <span class="glyphicon glyphicon-comment"></span>
+                    </div> <!-- end services-icon -->
+                </div>
+                <div class="col-md-3">
+                    <h4>24/7 supoort</h4>
+                    <p>I am a member of the Imperial Senate on a diplomatic mission to Alderaan.</p>
+                </div>
+
+            </div> <!-- end row -->
+
+            <div class="row">
+
+                <div class="col-md-1">
+                    <div class="services-icon center block-icon medium">
+                        <span class="glyphicon glyphicon-globe"></span>
+                    </div> <!-- end services-icon -->
+                </div>
+                <div class="col-md-3">
+                    <h4>great ideas</h4>
+                    <p>I am a member of the Imperial Senate on a diplomatic mission to Alderaan.</p>
+                </div>
+
+                <div class="col-md-1">
+                    <div class="services-icon center block-icon medium">
+                        <span class="glyphicon glyphicon-envelope"></span>
+                    </div> <!-- end services-icon -->
+                </div>
+                <div class="col-md-3">
+                    <h4>email marketing</h4>
+                    <p>I am a member of the Imperial Senate on a diplomatic mission to Alderaan.</p>
+                </div>
+
+                <div class="col-md-1">
+                    <div class="services-icon center block-icon medium">
+                        <span class="glyphicon glyphicon-th-list"></span>
+                    </div> <!-- end services-icon -->
+                </div>
+                <div class="col-md-3">
+                    <h4>interface design</h4>
+                    <p>I am a member of the Imperial Senate on a diplomatic mission to Alderaan.</p>
+                </div>
+            </div> <!-- end row -->
+        </div>
 </div>
