@@ -29,10 +29,10 @@
             </div>
             <div class="navbar-collapse collapse pull-right">
                <ul id="menu-header-menu" class="nav navbar-nav">
-                    <li ng-class="menuClass('')"><a href="/#/">Home</a></li>
-                    <li ng-class="menuClass('about')"><a href="/#/about">About</a></li>
-                    <li ng-class="menuClass('services')"><a href="/#/services">Services</a></li>
-                    <li ng-class="menuClass('contact')"><a href="/#/contact">Contact</a></li>
+                    <li ng-class="menuClass('')"><a href="#/">Home</a></li>
+                    <li ng-class="menuClass('about')"><a href="#/about">About</a></li>
+                    <li ng-class="menuClass('services')"><a href="#/services">Services</a></li>
+                    <li ng-class="menuClass('contact')"><a href="#/contact">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -41,7 +41,7 @@
 
 <!-- Banner
 ================================================== -->
-<section id="banner">
+<section id="banner" ng-if="showPageHero">
     <div id="myCarousel" class="carousel slide">
         <div class="tint"></div>
         <!-- <ol class="carousel-indicators">
@@ -116,7 +116,7 @@
 </footer>
 
 
-<script src="assets/js/scripts.js"></script>
+<script src="assets/js/scripts.min.js"></script>
 <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 
 </body>

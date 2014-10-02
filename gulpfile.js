@@ -18,7 +18,6 @@ var gulp = require('gulp'),
     notify = require('gulp-notify'),
     cache = require('gulp-cache'),
     livereload = require('gulp-livereload');
-    //wiredep = require('wiredep').stream;
 
 
 // Compile Sass using compass
