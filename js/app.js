@@ -47,6 +47,3 @@ myApp.config(['$routeProvider', function($routeProvider){
     })
 
 }])
- controller('HomeController', ['$scope', '$location', function($scope, $location) {
-    $scope.showPageHero = $location.path() === '/';
-  }]);
