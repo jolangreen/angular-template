@@ -1,0 +1,19 @@
+    <section>
+        <div class="container">
+            <div class="row cta">
+                <div class="col-md-4" ng-repeat="img in imgs">
+                    <div class="image-item">
+                        <div class="image image-hover-fx">
+                            <img ng-src="{{img.src}}" alt="">
+                            <div class="image-overlay"></div>
+                            <a href="assets/img/portfolio/photo (1).jpg" rel="prettyPhoto[pp_gal]" class="portfolio-zoom"><i class="fa fa-eye"></i></a>
+                        </div>
+                    </div>
+
+                    <h3>{{img.title}}</h3>
+                    <p>{{img.description}} </p>
+                    <a href="">Read More <i class="fa fa-chevron-circle-right"></i></a>
+                </div>
+            </div>
+        </div><!-- /.container -->
+    </section>

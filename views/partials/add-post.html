@@ -1,0 +1,105 @@
+<div class="container">
+
+<!--
+    * There are 3 ways of binding content from a controller to your view.
+    * First and most used method is using double curly braces, like this {{ name }}
+ -->
+<h2>{{ title }}</h2>
+
+<!--
+    * The other two methods are ng-bind, and ng-bind-html. Those are used as attributes
+    * of your HTML tag, like the example below. The difference between, ng-bind and ng-bind-html
+    * is that ng-bind-html renders HTML tags. Because of that it must be used carefully, its mandatory
+    * that you verify the content of any content that will be used with ng-bind-html.
+ -->
+<p ng-bind="content"></p>
+
+<!--
+    * In the following example I'm using a filter to convert a UNIX timestamp
+    * into a human readable format like Oct 28, 2014 12:22 PM
+ -->
+<small>Created on: {{ createdAt | date : 'medium' }}</small>
+
+<hr/>
+
+<h2>Example of a list of posts</h2>
+
+
+<!--
+    * When we want to loop through a set of data we use ng-repeat.
+    * In the example below we are looping through an array of posts
+    * and displaying each post's title, content and creation date.
+ -->
+
+ <!-- This block will repeat for each post -->
+<div ng-repeat="post in posts">
+    <h2>{{ post.title }}</h2>
+    <p>{{ post.content }}</p>
+    <small>Created on: {{ post.createdAt | date : 'medium' }}</small>
+</div>
+<!-- End of repeat block -->
+
+<hr/>
+
+<h2>Add new post </h2>
+<!--
+    * In order to send data from the view to controller we use ng-model.
+    * For example, if one create a input field with the attribute
+    * ng-model="name", the information typed in the field will be
+    * automagically available in you controller in $scope.name
+    * In the example below, we are creating an object to contain the user's
+    * submitted information, something like:
+    * $scope.newPost = {
+    *   title: "Whatever the user type",
+    *   content: "Again, whatever the user typed"
+    * }
+ -->
+<form class="form-horizontal">
+    <fieldset>
+
+        <legend>Add New Post</legend>
+
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="title">Title</label>
+            <div class="col-md-5">
+                <input ng-model="newPost.title" id="title" name="title" type="text" placeholder="place your title here" class="form-control input-md">
+<!--                   Λ
+    *                  |
+    *                  ng-model is used to bind the information
+    *                  typed in this field to a variable in the
+    *                  controller called $scope.newPost.title
+ -->
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="content">Content</label>
+            <div class="col-md-4">
+                <textarea ng-model="newPost.content" class="form-control" id="content" name="content"></textarea>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-4 control-label" for=""></label>
+            <div class="col-md-8">
+                <!--
+                    * Angular has a directive to bind actions to clicks, its called ng-click
+                    * Below we are using ng-click to call a function in our controller called
+                    * savePost(), this function must be declared in our controller like this:
+                    * $scope.savePost = function(){ 'do something here' };
+                 -->
+                <button ng-click="savePost()" class="btn btn-success">Save</button>
+
+                <!--
+                    * For the clear button instead of using a function to clear the fields
+                    * I'm just erasing the content of newPost, you can do that by assign
+                    * a blank object to newPost, like this: newPost = {};
+                 -->
+                <button ng-click="newPost = {}" class="btn btn-danger">Clear</button>
+            </div>
+        </div>
+
+    </fieldset>
+</form>
+
+</div>
