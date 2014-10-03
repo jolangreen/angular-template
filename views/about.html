@@ -1,17 +1,21 @@
-<h1>All users</h1>
+<section>
+  <div class="container">
+    <h1>About Us</h1>
 
-<div class="row">
-<!--
-      Using the new element the we created called user-card
-      note the our directive's name is userCard (camelCase)
-      but when we use it its dash separated, Thats because dashes
-      can cause issues in Javascript and HTML is case insensitive.
-      So the solution is to declare our directive in Javascript using
-      camelCase and use it dash separated in HTML.
-      |
-      |
-      V                                                    -->
-    <user-card ng-repeat="user in users" class="col-md-4">
-        <!-- Contents from userCard directive will be placed in here -->
-    </user-card>
-</div>
+    <div class="row">
+    <!--
+          Using the new element the we created called user-card
+          note the our directive's name is userCard (camelCase)
+          but when we use it its dash separated, Thats because dashes
+          can cause issues in Javascript and HTML is case insensitive.
+          So the solution is to declare our directive in Javascript using
+          camelCase and use it dash separated in HTML.
+          |
+          |
+          V                                                    -->
+        <user-card ng-repeat="user in users" class="col-md-4">
+            <!-- Contents from userCard directive will be placed in here -->
+        </user-card>
+    </div>
+  </div>
+</section>
