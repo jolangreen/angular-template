@@ -89,9 +89,11 @@ form
 /* ----- HEADER ----- */
 
 header
-    position: absolute
+    position: relative
     z-index: 2000
     width: 100%
+    background: image-url("headers/banner1.jpg") #f1f1f1
+    background-size: cover
     .navbar
         margin-bottom: 0
         padding: 20px 0
@@ -110,6 +112,9 @@ header
             width: 200px
             height: 50px
             background: image-url("logo.png") no-repeat
+
+.home header
+    background: transparent 
 
 // Navigation
 nav
@@ -204,9 +209,11 @@ ul.nav li:hover > ul,
 
 
 /* ----- BANNER ----- */
-#banner
+#main #banner
     overflow: hidden
     position: relative
+    padding: 0
+    margin-top: -95px
 
 
 .carousel
@@ -310,11 +317,13 @@ ul.nav li:hover > ul,
 
 
 /* ----- CONTENT ----- */
-#main
-    padding: 30px 0
-#main > section
-    padding: 60px 0
 
+#main section
+    padding: 80px 0
+
+
+.main-body
+    padding: 40px 0
 // .primary, .secondary
 
 
