@@ -19,6 +19,12 @@ myApp.controller('BaseController', ['$scope', '$location', function($scope, $loc
         var current = $location.path().substring(1);
         return page === current ? 'active' : '';
     };
+    
+    // Set class on home page
+    $scope.pageClass = function(pager) {
+        var current = $location.path().substring(1);
+        return pager === current ? 'home' : '';
+    };
 
 }]);
 
