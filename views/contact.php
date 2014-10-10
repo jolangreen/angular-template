@@ -18,9 +18,9 @@
 
     if ($_POST['submit']) {
         if (mail ($to, $subject, $body, $from)) {
-            echo '<p>Your message has been sent!</p>';
+            echo '<div class="pop-message success">Your message has been sent! <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button></div>';
         } else {
-            echo '<p>Something went wrong, go back and try again!</p>';
+            echo '<div class="pop-message fail">Something went wrong with your submission, please go back and try again! <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button></div>';
         }
     }
 
@@ -118,3 +118,9 @@ if(!$isValid) {
         </div><!-- .row -->
     </div>
 </section>
+
+<script>
+$('.pop-message').on('click', function() {
+    $(this).hide();
+});
+</script>
