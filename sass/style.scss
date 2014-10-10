@@ -5,20 +5,20 @@ $clrPrimary: #1FAE4B;
 $clrSecondary: #4ec0c1;
 
 $clrText: #8c989e;
-$clrMuted: #999;
+
 $clrBrightest: #fff;
-
-$clrLight: #e1e1e1;
-
-$clrDark: #222;
-$clrMutedDark: #383838;
+$clrBright: #e1e1e1;
+$clrMedium: #777;
+$clrDark: #333;
+$clrDarkest: #111;
 
 $fontPrimary: 'robotoregular', Arial, Helvetica, Sans-serif;
 $fontSecondary: 'HelveticaNeueThin', Arial, Helvetica, Sans-serif;
-
-$bannerHeight: 700px;
 
 @import "compass/css3";
 @import "reset";
 @import "typography";
 @import "layout";
+@import "page-elements";
+@import "responsive";
+

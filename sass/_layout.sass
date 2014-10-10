@@ -22,76 +22,22 @@ a:hover, a:focus, a:active
 hr
     margin: 15px 0
     border: 0
-    border-bottom: 1px solid $clrLight
+    border-bottom: 1px solid $clrBright
 
 .img-fit img
     width: 100%
 
-/* ==========================================================================
-   Buttons
-   ========================================================================== */
-
-.btn
-    color: $clrBrightest
-    background: $clrPrimary
-    //+border-radius(4px)
-    //+box-shadow(0px)
-    +transition(all 0.4s ease-in-out)
-
-
 
 /* ==========================================================================
-   Forms
+   Header
    ========================================================================== */
-
-form
-    input[type="text"], input[type="email"], input[type="url"]
-        width: 100%
-        height: 30px
-        padding: 4px
-        background: $clrBackground
-        border: 1px solid $clrLight
-        color: $clrText
-        font-size: 13px
-        +border-radius(5px)
-        margin-bottom: 15px
-
-    textarea
-        width: 100%
-        height: 100px
-        padding: 4px
-        background: $clrBackground
-        border: 1px solid $clrLight
-        color: $clrText
-        font-size: 13px
-        +border-radius(5px)
-
-    input[type="button"], input[type="submit"]
-        height: 36px
-        padding: 8px
-        background: $clrPrimary
-        cursor: pointer /* hand-shaped cursor */
-        cursor: hand /* for IE 5.x */
-        border: none
-        color: $clrBrightest
-        font-size: 14px
-        -moz-border-radius: 5px
-        border-radius: 5px
-        &:hover
-            background-color: $clrSecondary
-
-
-/* ==========================================================================
-   Layout Structure
-   ========================================================================== */
-
-
-/* ----- HEADER ----- */
 
 header
-    position: absolute
+    position: relative
     z-index: 2000
     width: 100%
+    background: image-url("headers/banner1.jpg") #f1f1f1
+    background-size: cover
     .navbar
         margin-bottom: 0
         padding: 20px 0
@@ -110,6 +56,10 @@ header
             width: 200px
             height: 50px
             background: image-url("logo.png") no-repeat
+
+.home header
+    background: transparent 
+
 
 // Navigation
 nav
@@ -172,7 +122,7 @@ nav
 
     .sub-menu,
     .children
-        background-color: $clrLight
+        background-color: $clrBright
         border-top: 0
         display: none
         padding: 0
@@ -202,11 +152,15 @@ ul.nav li:hover > ul,
     display: block
 
 
+/* ==========================================================================
+   Banner
+   ========================================================================== */
 
-/* ----- BANNER ----- */
-#banner
+#main #banner
     overflow: hidden
     position: relative
+    padding: 0
+    margin-top: -95px
 
 
 .carousel
@@ -227,7 +181,7 @@ ul.nav li:hover > ul,
         color: $clrBrightest
 
     .item
-        height: $bannerHeight
+        height: 700px
 
         img
             position: absolute
@@ -267,7 +221,7 @@ ul.nav li:hover > ul,
 
         .glyphicon-chevron-left, .glyphicon-chevron-right
             top: 44%
-            background: $clrDark
+            background: $clrDarkest
             height: 80px
             width: 50px
             line-height: 77px
@@ -309,12 +263,15 @@ ul.nav li:hover > ul,
 
 
 
-/* ----- CONTENT ----- */
-#main
-    padding: 30px 0
-#main > section
-    padding: 60px 0
+/* ==========================================================================
+   Main Body, Content Area
+   ========================================================================== */
+#main section
+    padding: 80px 0
 
+
+.main-body
+    padding: 40px 0
 // .primary, .secondary
 
 
@@ -330,7 +287,7 @@ ul.nav li:hover > ul,
         margin-bottom: 35px
     ul li
         list-style: none
-        border-bottom: 1px solid $clrLight
+        border-bottom: 1px solid $clrBright
         line-height: 40px
         margin-bottom: 0
         a
@@ -358,12 +315,15 @@ ul.nav li:hover > ul,
 
 
 
-/* ----- FOOTER ----- */
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
 footer
-    background: $clrDark
+    background: $clrDarkest
 
     hr
-        border-bottom: 1px solid $clrMutedDark
+        border-bottom: 1px solid $clrDark
         margin: 5px 0
 
     .container .row
@@ -404,7 +364,7 @@ footer
                 margin-right: 15px
                 padding: 0 10px
                 float: right
-                color: $clrLight
+                color: $clrBright
 
                 &:hover
                     background: $clrPrimary
@@ -419,354 +379,4 @@ footer
 
     .row:last-child
         padding: 20px 0
-
-
-@media (max-width: 767px)
-    footer .container
-        text-align: center
-
-        .pull-right
-            float: none !important
-
-
-/* ==========================================================================
-   Features / Page Elements
-   ========================================================================== */
-
-
-.cta .block-icon
-    width: 70px
-    height: 70px
-    line-height: 70px
-    font-size: 30px
-
-a.cta:hover h3
-    background: rgba(31, 174, 75, 1)
-
-.block-body
-    h3
-        margin-top: 20px
-        margin-bottom: 10px
-
-// Gallery
-.gallery-area
-    .col-md-4
-        padding-left: 0
-        padding-right: 0
-    .image
-        height: 290px
-
-// ----- LIST -----
-article.primary
-    ul
-        list-style-type: none
-        padding-left: 15px
-
-        li:before
-            font-family: 'FontAwesome'
-            content: '\f058'
-            margin: 0 5px 0 -15px
-
-        li
-            margin-bottom: 15px
-
-    ol li:before
-        content: none
-
-
-
-// ----- TABLE -----
-article table
-    thead tr
-        background: $clrPrimary
-        color: $clrBrightest
-
-    tr:nth-child(2n)
-        background: #e0e3e5
-
-    tr
-        background: #f1f1f1
-
-    tr td
-        padding: 5px 10px
-
-
-
-/* EFFECTS & EXTRAS */
-
-// Icon
-.block-icon
-    width: 40px
-    height: 40px
-    line-height: 40px
-    font-size: 100%
-    text-align: center
-    background: $clrPrimary
-    color: $clrBrightest
-    +border-radius(50%)
-    margin: 0 auto
-    display: block
-
-.block-icon-o
-    width: 40px
-    height: 40px
-    line-height: 40px
-    font-size: 100%
-    text-align: center
-    background: transparent
-    color: $clrBrightest
-    border: 2px solid $clrBrightest
-    +border-radius(50%)
-    margin: 0 auto
-    display: block
-
-.block-icon.large
-    width: 70px
-    height: 70px
-    line-height: 75px
-    font-size: 25px
-
-
-// Image Hover
-.image
-    display: block
-    height: 190px
-    margin-bottom: 20px
-    overflow: hidden
-    img
-        position: absolute
-        width: 100%
-        min-height: 100%
-
-
-.image-hover-fx
-    position: relative
-    overflow: hidden
-
-    .image-overlay
-        background-color: $clrPrimary
-        width: 100%
-        height: 100%
-        display: block
-        position: absolute
-        top: 0
-        left: 0
-        opacity: 0
-        filter: alpha(opacity=0)
-        -webkit-transition: all 0.2s ease
-        transition: all 0.2s ease
-
-    .portfolio-zoom
-        width: 65px
-        height: 65px
-        text-align: center
-        background-color: $clrDark
-        display: none
-        line-height: 65px
-        position: absolute
-        top: 50%
-        left: -65px
-        margin-top: -22px
-        font-size: 30px
-        color: #fff
-        display: block
-        border-radius: 2px
-        &:hover
-            background: $clrPrimary
-
-    .title-fx
-        position: absolute
-        bottom: 15%
-        color: white
-        text-align: center
-        width: 100%
-        font-size: 20px
-        opacity: 0
-
-// Hover Effects
-.image-item:hover .image-hover-fx .image-overlay
-    opacity: 0.50
-    filter: alpha(opacity=50)
-
-.image-item:hover .image-hover-fx .portfolio-zoom
-    display: block
-    left: 50%
-    margin-left: -35px
-    -webkit-transition: all 0.2s ease
-    transition: all 0.2s ease
-
-.image-item:hover .image-hover-fx .title-fx
-    opacity: 1
-    transition: all 0.3s ease
-
-
-// Spacing
-.spacing-container
-    padding: 20px 0
-
-// Tint
-.tint
-    background: rgba(0, 0, 0, .5)
-    width: 100%
-    height: 100%
-    position: absolute
-    z-index: 1
-
-/* ----- BLOG ----- */
-.blog article
-    border-bottom: 1px solid $clrLight
-    margin-bottom: 30px
-
-#nav-single
-    border-top: 1px solid $clrLight
-    padding: 25px 0
-
-.nav-next
-    float: right
-
-.textwidget
-    padding: 10px
-
-// Pagination
-.pagination .page-numbers
-    padding: 10px
-    background: $clrPrimary
-    color: $clrBrightest
-    margin-right: 5px
-    border-radius: 4px
-
-.pagination .page-numbers.current
-    background: $clrSecondary
-    color: $clrBrightest
-
-/* ==========================================================================
-   ADVERTISING
-   ========================================================================== */
-
-.ad
-    margin: 0 auto
-    background: #f1f1f1
-    border: 1px solid #fff
-    overflow: hidden
-
-
-.ad:after
-    content: "Advertise here"
-    font-size: 13px
-    text-align: center
-    width: 100%
-    display: block
-
-
-.ad.leaderboard:after 
-    line-height: 90px 
-
-.ad.medrectangle:after 
-    line-height: 250px 
-
-.leaderboard
-    width: 728px
-    height: 90px
-
-
-.medrectangle
-    width: 300px
-    height: 250px
-
-
-
-/* ==========================================================================
-   RESPONSIVE CSS
-   ========================================================================== */
-
-/* Small devices (tablets, 768px and up) */
-//@media (min-width: @screen-sm-min)
-
-/* Medium devices (desktops, 992px and up) */
-//@media (min-width: @screen-md-min)
-
-/* Large devices (large desktops, 1200px and up) */
-//@media (min-width: @screen-lg-min)
-
-
-@media (max-width: 979px)
-    body
-        padding-left: 0
-        padding-right: 0
-
-// ---- BANNER ----
-@media (max-width: 979px)
-    .container.navbar-wrapper
-        margin-bottom: 0
-        width: auto
-
-    .navbar-inner
-        border-radius: 0
-
-    nav#access
-        float: none
-        background-color: $clrPrimary
-
-    .nav-collapse .navbar-form, .nav-collapse .navbar-search
-        border-top: 1px solid $clrLight
-        border-bottom: 1px solid $clrLight
-
-    .navbar
-        height: auto
-
-    .carousel .item
-        height: $bannerHeight
-
-    .carousel img
-        width: auto
-        height: 383px
-
-
-//
-@media (max-width: 767px)
-    header#branding
-        margin-left: -20px
-        margin-right: -20px
-
-    .row
-        padding-left: 15px
-        padding-right: 15px
-
-    nav
-        float: none
-        .nav, .nav li
-            display: block
-
-    .nav-collapse .navbar-form, .nav-collapse .navbar-search
-        border-top: 1px solid $clrLight
-        border-bottom: 1px solid $clrLight
-
-    .navbar-toggle .icon-bar
-        background: $clrBrightest
-        
-    .navbar
-        height: auto
-        .navbar-collapse
-            background: $clrMutedDark
-        
-        .pull-right
-            float: none !important
-
-    .carousel
-        margin-left: -20px
-        margin-right: -20px
-
-        .item
-            height: 300px
-
-        img
-            height: 300px
-
-
-
-    footer
-        margin-left: -20px
-        margin-right: -20px
-        padding-left: 20px
-        padding-right: 20px
 
