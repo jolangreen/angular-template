@@ -52,6 +52,29 @@ form
         &:hover
             background-color: $clrSecondary
 
+form#contactform
+    .form-group label
+        text-align: right
+
+    fieldset
+        margin-bottom: 50px
+
+    input[type="text"].ng-invalid.ng-dirty, input[type="email"].ng-invalid.ng-dirty
+        border: 1px solid red !important
+
+    .form-group span
+        font-size: 12px
+        margin-top: -10px
+        display: block
+        color: red
+        position: absolute
+
+    input[required]
+        background: url('/assets/images/required-field.jpg') no-repeat top right
+
+    input[disabled="disabled"]
+        background: #ccc
+        
 
 /* ==========================================================================
    Features / Page Elements
