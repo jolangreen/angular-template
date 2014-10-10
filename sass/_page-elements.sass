@@ -75,7 +75,26 @@ form#contactform
     input[disabled="disabled"]
         background: #ccc
         
-
+/* Form Success Message Pop Up */
+.pop-message
+    position: fixed
+    height: 40
+    text-align: center
+    padding: 8px 5px
+    color: white
+    display: block
+    z-index: 9999
+    width: 100%
+    font-weight: bold
+    cursor: pointer
+    &.success
+        background: rgba(67, 169, 72, 0.7)
+        border: 2px solid #81c341
+    &.fail
+        background: rgba(200, 60, 60, 0.7)
+        border: 2px solid #e67676
+        
+        
 /* ==========================================================================
    Features / Page Elements
    ========================================================================== */
