@@ -68,9 +68,9 @@ if(!$isValid) {
 <section>
   <div class="container">
         <h1>Contact</h1>
-        <div class="row contact-form">
+        <div class="row">
             <div class="col-md-6">
-                <form id="rqform" name="contactform" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" novalidate>
+                <form id="contactform" name="contactform" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" novalidate>
                     <div class="form-group">
                         <input type="text" id="name" name="name" ng-model="user.name" ng-minlength="3" required placeholder="Name">
                         <span ng-show="contactform.name.$dirty && contactform.name.$error.name">Enter a full name</span>
