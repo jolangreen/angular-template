@@ -32,6 +32,10 @@ $(window).scroll(function() {
     });
 });
 
+//Form Success Pop Up Message
+$('.pop-message').on('click', function() {
+    $(this).hide();
+});
 
 //Full Height
 /*
