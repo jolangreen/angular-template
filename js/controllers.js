@@ -107,3 +107,13 @@ myApp.controller('UsersController', ['$scope', 'UserService', function($scope, U
         $scope.users = data;
     });
 }]);
+
+
+myApp.controller('ContactController', ['$scope', function($scope){ 
+
+    $scope.email = "Enter Email";
+
+}]);
+
+
+

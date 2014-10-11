@@ -74,19 +74,23 @@ form#contactform
 
     input[disabled="disabled"]
         background: #ccc
+        cursor: default
         
 /* Form Success Message Pop Up */
 .pop-message
     position: fixed
-    height: 40
+    height: 40px
     text-align: center
-    padding: 8px 5px
+    padding: 8px 10px
     color: white
     display: block
     z-index: 9999
-    width: 100%
+    width: 80%
     font-weight: bold
     cursor: pointer
+    border-radius: 7px
+    top: 3%
+    left: 10%
     &.success
         background: rgba(67, 169, 72, 0.7)
         border: 2px solid #81c341
@@ -108,6 +112,9 @@ a.cta:hover h3
     h3
         margin-top: 20px
         margin-bottom: 10px
+
+.social .block-icon
+    display: inline-block
 
 // Gallery
 .gallery-area

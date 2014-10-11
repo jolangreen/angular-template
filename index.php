@@ -8,13 +8,13 @@
     $name = $_POST['name'];
     $email = $_POST['email'];
     $phone = $_POST['phone'];
-    $random = $_POST['random'];
+    $fax = $_POST['fax'];
     $message = $_POST['message'];
-    $from = 'From: CompanyName';
+    $from = 'From: UntitledCompany';
     $to = 'jolangreen@hotmail.com';
-    $subject = 'CompanyName Contact Request';
+    $subject = 'UntitledCompany Contact Form Submission';
 
-    $body = "From: $name\n E-Mail: $email\n Phone: $phone\n Random: $random\n Message:\n $message";
+    $body = "From: $name\n E-Mail: $email\n Phone: $phone\n Fax: $fax\n Message:\n $message";
 
     if ($_POST['submit']) {
         if (mail ($to, $subject, $body, $from)) {
