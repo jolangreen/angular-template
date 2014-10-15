@@ -1,0 +1,77 @@
+//Back to top button
+#back-top
+    position: fixed
+    bottom: 30px
+    margin-left: 30px
+
+    a
+        width: 60px
+        display: block
+        text-align: center
+        text-decoration: none
+        color: #fff
+        /* background color transition */
+        +transition(1s)
+        -webkit-transition: 1s
+        -moz-transition: 1s
+        transition: 1s
+
+        &:hover
+            color: #fff
+
+/* arrow icon (span tag) */
+#back-top span
+    width: 60px
+    height: 60px
+    display: block
+    margin-bottom: 7px
+    background: $clrSecondary
+    /* rounded corners */
+    -webkit-border-radius: 15px
+    -moz-border-radius: 15px
+    border-radius: 15px
+    /* background color transition */
+    +transition(1s)
+    line-height: 60px
+    &:before
+        font-family: 'FontAwesome'
+        content: '\f077'
+        font-size: 25px
+
+#back-top a:hover span
+    background-color: #777
+
+
+
+//Back To Top
+$(document).ready(function(){
+
+    // hide #back-top first
+    $("#back-top").hide();
+
+    // fade in #back-top
+    $(function () {
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 100) {
+                $('#back-top').fadeIn();
+            } else {
+                $('#back-top').fadeOut();
+            }
+        });
+
+        // scroll body to 0px on click
+        $('#back-top a').click(function () {
+            $('body,html').animate({
+                scrollTop: 0
+            }, 800);
+            return false;
+        });
+    });
+
+});
+
+<div id="back-top">
+    <a href="#top"><span></span></a>
+</div>
+
+
