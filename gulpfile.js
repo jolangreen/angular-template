@@ -100,11 +100,11 @@ gulp.task('watch', function() {
   var server = livereload();
 
   // Watch any files in assets/, reload on change
-  gulp.watch(['assets/**', 'index.html']).on('change', function(file) {
+  gulp.watch(['assets/**', 'views/**', 'index.html']).on('change', function(file) {
     server.changed(file.path);
   });
 
   livereload.listen();
-  gulp.watch('sass/**').on('change', livereload.changed);
+  gulp.watch('sass/**', 'assets/css/*', 'assets/js/*').on('change', livereload.changed);
 
 });
