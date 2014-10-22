@@ -103,10 +103,10 @@ if(!$isValid) {
                 </ul>
             </div>
             <div class="col-sm-6 social">
-                <a href="#" class="block-icon"><i class="fa fa-facebook"></i></a>
-                <a href="#" class="fa fa-twitter"></a>
-                <a href="#" class="fa fa-linkedin"></a>
-                <a href="#" class="fa fa-pinterest"></a>
+                <a href="#" target="_blank" class="block-icon"><i class="fa fa-facebook"></i></a>
+                <a href="#" target="_blank" class="fa fa-twitter"></a>
+                <a href="#" target="_blank" class="fa fa-linkedin"></a>
+                <a href="#" target="_blank" class="fa fa-pinterest"></a>
             </div>
         </div>
         <hr>
