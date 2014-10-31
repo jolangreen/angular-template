@@ -3,18 +3,33 @@
 // starting the session
  session_start();
 
-    $isValid = false; //Assume validation is bad
+$allowed_keys = array(
+        'name',
+        'email',
+        'phone',
+        'fax',
+        'message'
+    );
 
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $phone = $_POST['phone'];
-    $fax = $_POST['fax'];
-    $message = $_POST['message'];
+    foreach ($allowed_keys as $key) {
+        $value = trim($_POST[$key]);
+        if (empty($value)) {
+            echo '<p>Something went wrong, try again!</p>';
+        }
+        $$key = $value;
+    };
+
     $from = 'From: UntitledCompany';
     $to = 'jolangreen@hotmail.com';
     $subject = 'UntitledCompany Contact Form Submission';
 
-    $body = "From: $name\n E-Mail: $email\n Phone: $phone\n Fax: $fax\n Message:\n $message";
+    $body = "CUSTOMER INFORMATION
+From: $name
+E-Mail: $email
+Phone: $phone
+Fax: $fax
+Message: $message
+";
 
     if ($_POST['submit']) {
         if (mail ($to, $subject, $body, $from)) {
@@ -23,20 +38,6 @@
             echo '<div class="pop-message fail">Something went wrong with your submission, please go back and try again! <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button></div>';
         }
     }
-
-
-if (isset($_POST['submit'])) {
-    if(empty($name)) {
-        echo '<p>Something went wrong, go back and try again!</p>';
-    } else {
-        $isValid = true;
-    }
-}
-/*
-if(!$isValid) {
-
-}
-*/
 
 ?>
 <!DOCTYPE html>
