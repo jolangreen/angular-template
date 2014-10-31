@@ -23,7 +23,7 @@ $allowed_keys = array(
     $to = 'jolangreen@hotmail.com';
     $subject = 'UntitledCompany Contact Form Submission';
 
-    $body = "CUSTOMER INFORMATION
+    $body = "
 From: $name
 E-Mail: $email
 Phone: $phone
