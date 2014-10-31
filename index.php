@@ -14,7 +14,7 @@ $allowed_keys = array(
     foreach ($allowed_keys as $key) {
         $value = trim($_POST[$key]);
         if (empty($value)) {
-            echo '<p>Something went wrong, try again!</p>';
+            // Do Something;
         }
         $$key = $value;
     };
