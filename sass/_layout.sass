@@ -31,16 +31,15 @@ hr
 /* ==========================================================================
    Header
    ========================================================================== */
-
+.home header
+    background: transparent 
+    
 header
     position: relative
     z-index: 2000
     width: 100%
     background: image-url("headers/banner1.jpg") #f1f1f1
     background-size: cover
-    .navbar
-        margin-bottom: 0
-        padding: 20px 0
 
     .container
         position: relative
@@ -56,13 +55,13 @@ header
             width: 200px
             height: 50px
             background: image-url("logo.png") no-repeat
-
-.home header
-    background: transparent 
-
+            
 
 // Navigation
-nav
+nav.navbar
+    margin-bottom: 0
+    padding: 7px 0 4px
+    +border-radius(0)
     background: transparent
 
     a, a:visited
@@ -71,21 +70,21 @@ nav
             color: $clrBrightest
             text-decoration: none
 
-    .nav li
-        display: inline-block
-        position: relative
-        padding: 5px 0
-
-    .nav > li > a
-        padding: 8px 15px
-        +border-radius(10px)
-        text-transform: uppercase
-        margin-left: 5px
-        &:hover
-            background-color: $clrPrimary
-
-    /*Active State */
     .nav
+        display: inline-block
+        & > li
+            display: inline-block
+            position: relative
+            padding: 5px 0
+            & > a
+                padding: 8px 15px
+                +border-radius(10px)
+                text-transform: uppercase
+                margin-left: 5px
+                &:hover
+                    background-color: $clrPrimary
+
+    /* Active State */
         .active > a,
         .current_page_item > a,
         .current_page_ancestor > a,
@@ -95,63 +94,56 @@ nav
             background-color: $clrPrimary
             text-decoration: none
 
-    button.navbar-toggle
-        background-color: $clrPrimary
 
-.navbar
-    margin-bottom: 0
+    /* Sub-Menu */
+        .menu-toggle
+            display: none
 
-/* Sub-Menu */
-.nav
-    display: inline-block
+        .sub-menu li a, .sub-menu li ul li a
+            color: $clrPrimary
+            display: block
+            font-size: 15px
+            line-height: 1
+            padding: 10px 20px
+            text-decoration: none
+            min-width: 200px
 
-    .menu-toggle
-        display: none
+        .sub-menu
+            top: 30px
 
-    .sub-menu li a, .sub-menu li ul li a
-        color: $clrPrimary
-        display: block
-        font-size: 15px
-        line-height: 1
-        padding: 10px 20px
-        text-decoration: none
-        min-width: 200px
+        .sub-menu,
+        .children
+            background-color: $clrBright
+            border-top: 0
+            display: none
+            padding: 0
+            position: absolute
+            left: -2px
+            z-index: 99999
+            font-family: $fontPrimary
+            list-style: none
 
-    .sub-menu
-        top: 30px
+        .sub-menu ul,
+        .children ul
+            border-left: 0
+            left: 100%
+            top: 0px
 
-    .sub-menu,
-    .children
-        background-color: $clrBright
-        border-top: 0
-        display: none
-        padding: 0
-        position: absolute
-        left: -2px
-        z-index: 99999
-        font-family: $fontPrimary
-        list-style: none
-
-    .sub-menu ul,
-    .children ul
-        border-left: 0
-        left: 100%
-        top: 0px
-
-ul.nav ul a,
-.nav ul ul a
-    color: #fff
+ul.nav ul a, .nav ul ul a
+    color: white
     margin: 0
 
-ul.nav ul a:hover,
-.nav ul ul a:hover
-    background-color: #ccc
+ul.nav ul a:hover, .nav ul ul a:hover
+    background-color: $clrBright
 
-ul.nav li:hover > ul,
-.nav ul li:hover > ul
+ul.nav li:hover > ul, .nav ul li:hover > ul
     display: block
 
 
+button.navbar-toggle
+    background-color: $clrPrimary
+    
+    
 /* ==========================================================================
    Banner
    ========================================================================== */
