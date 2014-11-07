@@ -29,10 +29,13 @@ $fontSecondary: 'HelveticaNeueThin', Arial, Helvetica, Sans-serif;
     height: $height;
 }
 
+@mixin border($side, $color) {
+    border-#{$side}: 1px solid $color;
+}
+
 @import "compass/css3";
 @import "reset";
 @import "typography";
 @import "layout";
 @import "page-elements";
 @import "responsive";
-
