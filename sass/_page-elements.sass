@@ -9,6 +9,9 @@
     //+border-radius(4px)
     //+box-shadow(0px)
     +transition(all 0.4s ease-in-out)
+   &:hover
+        background: $clrSecondary
+        color: $clrBrightest
 
 
 
@@ -17,7 +20,7 @@
    ========================================================================== */
 
 form
-    input[type="text"], input[type="email"], input[type="url"]
+    input[type="text"], input[type="email"], input[type="url"], textarea
         width: 100%
         height: 30px
         padding: 4px
@@ -29,14 +32,7 @@ form
         margin-bottom: 15px
 
     textarea
-        width: 100%
         height: 100px
-        padding: 4px
-        background: $clrBackground
-        border: 1px solid $clrBright
-        color: $clrText
-        font-size: 13px
-        +border-radius(5px)
 
     input[type="button"], input[type="submit"]
         height: 36px
