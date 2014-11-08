@@ -84,7 +84,7 @@ nav.navbar
                 &:hover
                     background-color: $clrPrimary
 
-//Active State 
+         //Active State --
         .active > a,
         .current_page_item > a,
         .current_page_ancestor > a,
@@ -94,18 +94,9 @@ nav.navbar
             background-color: $clrPrimary
             text-decoration: none
 
-//Sub-Menu
+         //Sub-Menu --
         .menu-toggle
             display: none
-
-        .sub-menu li a, .sub-menu li ul li a
-            color: $clrPrimary
-            display: block
-            font-size: 15px
-            line-height: 1
-            padding: 10px 20px
-            text-decoration: none
-            min-width: 200px
 
         .sub-menu
             top: 30px
@@ -118,29 +109,37 @@ nav.navbar
             padding: 0
             position: absolute
             left: -2px
-            z-index: 99999
-            font-family: $fontPrimary
+            z-index: 3000
             list-style: none
+            li
+                padding: 6px 5px
+                text-align: center
+                +border(bottom, #555)
+                background: $clrDark
+                a
+                    color: $clrBrightest
+                    margin: 0
+                    display: block
+                    min-width: 200px
+                    text-decoration: none
 
-        .sub-menu ul,
-        .children ul
-            border-left: 0
-            left: 100%
-            top: 0px
-
-ul.nav ul a, .nav ul ul a
-    color: white
-    margin: 0
-
-ul.nav ul a:hover, .nav ul ul a:hover
-    background-color: $clrBright
-
-ul.nav li:hover > ul, .nav ul li:hover > ul
-    display: block
-
-
-button.navbar-toggle
-    background-color: $clrPrimary
+                &:hover
+                    background: $clrSecondary
+                    color: $clrBrightest
+                    a
+                        color: $clrBrightest
+                          
+      
+            .sub-menu ul,
+            .children ul
+                border-left: 0
+                left: 100%
+                top: 0px
+      
+            //HOVER ACTIVATION
+            li:hover > ul, li:hover > ul
+                display: block
+                
     
     
 /* ==========================================================================
