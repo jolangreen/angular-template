@@ -2,7 +2,7 @@
   <div class="container">
         <h1>Contact</h1>
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6" ng-controller="ContactController">
                 <form id="contactform" name="contactform" method="post" action="#/contact" novalidate>
                     <div class="form-group">
                         <input type="text" id="name" name="name" ng-model="user.name" ng-minlength="3" required placeholder="Name">

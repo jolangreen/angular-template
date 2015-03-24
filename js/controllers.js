@@ -109,11 +109,18 @@ myApp.controller('UsersController', ['$scope', 'UserService', function($scope, U
 }]);
 
 
-myApp.controller('ContactController', ['$scope', function($scope){ 
-
-    $scope.email = "Enter Email";
-
-}]);
+myApp.controller('ContactController', function($scope, $http) {
+  $scope.formData = {};
+  $scope.processForm = function() {
+    alert('valid form!')
+    $http({
+      method  : 'POST',
+      url     : 'contactform.php',
+      data    : $scope.formData,
+      headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
+    });
+  };
+});
 
 
 

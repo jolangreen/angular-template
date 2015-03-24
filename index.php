@@ -10,9 +10,9 @@
     $phone = $_POST['phone'];
     $fax = $_POST['fax'];
     $message = $_POST['message'];
-    $from = 'From: UntitledCompany';
+    $from = 'From: companyname';
     $to = 'jolangreen@hotmail.com';
-    $subject = 'UntitledCompany Contact Form Submission';
+    $subject = 'companyname Contact Form Submission';
 
     $body = "From: $name\n E-Mail: $email\n Phone: $phone\n Fax: $fax\n Message:\n $message";
 
@@ -44,7 +44,7 @@ if(!$isValid) {
 <head>
     <meta charset="UTF-8">
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-    <title>UntitledCompany</title>
+    <title>companyname</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0">
 
     <link rel="stylesheet" href="assets/css/bootstrap.css" />
@@ -112,7 +112,7 @@ if(!$isValid) {
         <hr>
         <div class="row">
             <div class="col-lg-12 copyright">
-                &copy; 2014 UntitledCompany. All Rights Reserved.
+                &copy; 2014 companyname. All Rights Reserved.
             </div>
         </div>
     </div>
