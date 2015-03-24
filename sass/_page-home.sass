@@ -1,0 +1,87 @@
+/* ==========================================================================
+   Banner
+   ========================================================================== */
+
+#main #banner
+    overflow: hidden
+    position: relative
+    padding: 0
+    margin-top: -95px
+
+
+.carousel
+
+    .container
+        position: relative
+        z-index: 9
+
+    .down-button
+        position: absolute
+        bottom: 40px
+        left: 47.5%
+        z-index: 10
+        width: 80px
+        height: 80px
+        line-height: 80px
+        font-size: 30px
+        color: $clrBrightest
+
+    .item
+        height: 700px
+
+        img
+            position: absolute
+            top: 0
+            left: 0
+            min-width: 100%
+            height: 100%
+
+    .carousel-caption
+        background-color: transparent
+        width: 600px
+        margin: 0 auto
+        top: 20%
+
+        h1, .carousel-caption p
+            margin: 0
+            line-height: 1.25
+            color: #fff
+            text-shadow: 0 1px 1px rgba(0,0,0,.4)
+
+        h1
+            font-size: 50px
+        p
+            font-size: 22px
+        a.btn
+            padding: 10px 20px
+            font-size: 20px
+            text-transform: uppercase
+            background-color: transparent
+            border: 2px solid $clrBrightest
+            color: $clrBrightest
+            margin-top: 15px
+
+
+    .carousel-control
+        z-index: 5
+
+        .glyphicon-chevron-left, .glyphicon-chevron-right
+            top: 44%
+            background: $clrDarkest
+            height: 80px
+            width: 50px
+            line-height: 77px
+            color: $clrBrightest
+
+        .glyphicon-chevron-left
+            left: 0
+        .glyphicon-chevron-right
+            right: 0
+
+
+
+/* Page Classes */
+a.cta:hover h3
+    background: rgba(31, 174, 75, 1)
+
+

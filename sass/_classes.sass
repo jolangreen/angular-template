@@ -1,0 +1,80 @@
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+.btn
+    color: $clrBrightest
+    background: $clrPrimary
+    //+border-radius(4px)
+    //+box-shadow(0px)
+    +transition(all 0.4s ease-in-out)
+    &:hover
+        background: $clrSecondary
+        color: $clrBrightest
+
+
+/* ==========================================================================
+   Classes
+   ========================================================================== */
+
+// Spacing
+.spacing-container
+    padding: 20px 0
+
+// Tint
+.tint
+    background: rgba(0, 0, 0, .5)
+    width: 100%
+    height: 100%
+    position: absolute
+    top: 0
+    z-index: 1
+
+.breadcrumb
+    background: transparent
+    line-height: 40px
+    margin-bottom: 0
+
+// Icon
+.block-icon
+    width: 40px
+    height: 40px
+    line-height: 40px
+    font-size: 100%
+    text-align: center
+    background: $clrPrimary
+    color: $clrBrightest
+    +border-radius(50%)
+    margin: 0 auto
+    display: inline-block
+
+//Icon
+.block-icon-o
+    width: 40px
+    height: 40px
+    line-height: 40px
+    font-size: 100%
+    text-align: center
+    background: transparent
+    color: $clrBrightest
+    border: 2px solid $clrBrightest
+    +border-radius(50%)
+    margin: 0 auto
+    display: inline-block
+
+.block-icon.large
+    width: 70px
+    height: 70px
+    line-height: 70px
+    font-size: 30px
+
+//
+#nav-single
+    border-top: 1px solid $clrBright
+    padding: 25px 0
+
+.nav-next
+    float: right
+
+.textwidget
+    padding: 10px

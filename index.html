@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
 <head>
     <meta charset="UTF-8">
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
@@ -8,10 +8,13 @@
 
     <link rel="stylesheet" href="assets/css/bootstrap.css" />
     <link rel="stylesheet" href="assets/css/font-awesome.css" />
-    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="assets/css/main.css" type="text/css" />
+    <!--[if lt IE 9]>
+      <script src="assets/js/ie8_fixes/ie_scripts.js"></script>
+    <![endif]-->
 </head>
 
-<body ng-app="myApp" ng-controller="BaseController" ng-class="pageClass('')">
+<body ng-controller="BaseController" ng-class="pageClass('')">
 
 <!-- Header
 ================================================== -->
@@ -29,10 +32,10 @@
             </div>
             <div class="navbar-collapse collapse pull-right">
                <ul id="menu-header-menu" class="nav navbar-nav">
-                    <li ng-class="menuClass('')"><a href="#/">Home</a></li>
-                    <li ng-class="menuClass('about')"><a href="#/about">About</a></li>
-                    <li ng-class="menuClass('services')"><a href="#/services">Services</a></li>
-                    <li ng-class="menuClass('contact')"><a href="#/contact">Contact</a></li>
+                    <li ng-class="menuClass('')"><a href="#!/">Home</a></li>
+                    <li ng-class="menuClass('about')"><a href="#!/about">About</a></li>
+                    <li ng-class="menuClass('services')"><a href="#!/services">Services</a></li>
+                    <li ng-class="menuClass('contact')"><a href="#!/contact">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -63,31 +66,22 @@
             </div>
             <div class="col-sm-6 social">
                 <a href="#" target="_blank" class="block-icon"><i class="fa fa-facebook"></i></a>
-                <a href="#" target="_blank" class="fa fa-twitter"></a>
-                <a href="#" target="_blank" class="fa fa-linkedin"></a>
-                <a href="#" target="_blank" class="fa fa-pinterest"></a>
+                <a href="#" target="_blank" class="block-icon"><i class="fa fa-twitter"></i></a>
+                <a href="#" target="_blank" class="block-icon"><i class="fa fa-linkedin"></i></a>
+                <a href="#" target="_blank" class="block-icon"><i class="fa fa-pinterest"></i></a>
             </div>
         </div>
         <hr>
         <div class="row">
             <div class="col-lg-12 copyright">
-                &copy; 2014 companyname. All Rights Reserved.
+                &copy; 2015 companyname. All Rights Reserved.
             </div>
         </div>
     </div>
 </footer>
 
-
-<!-- <script src="assets/js/scripts.min.js"></script> -->
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular-route.min.js"></script>
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/controllers.js"></script>
-    <script src="js/directives.js"></script>
-    <script src="js/filters.js"></script>
-    <script src="js/services.js"></script>
+<!-- Scripts -->
+<script src="assets/js/scripts.js"></script>
 <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 
 </body>

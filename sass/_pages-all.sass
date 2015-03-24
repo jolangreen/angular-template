@@ -1,0 +1,71 @@
+
+/* Sub Page Column */
+.secondary
+    aside
+        margin-bottom: 30px
+    h3
+        color: $clrText
+        margin-bottom: 5px
+    ul
+        padding-left: 0
+        margin-left: 0
+        margin-bottom: 35px
+    ul li
+        list-style: none
+        border-bottom: 1px solid $clrBright
+        line-height: 40px
+        margin-bottom: 0
+        a
+            color: $clrText
+            &:hover
+                color: $clrPrimary
+                text-decoration: none
+
+        &.current_page_item > a,
+        &.current_page_ancestor > a,
+        &.current-menu-item > a,
+        &.current-menu-ancestor > a
+            color: $clrPrimary
+
+        ul ul li
+            border-bottom: none
+            line-height: 30px
+            padding-left: 20px
+
+    // li:before
+    //     font-family: 'FontAwesome'
+    //     content: '\f105'
+    //     margin: 0 10px 0 -15px
+
+
+
+/* Contact Page */
+form#contactform
+    .form-group label
+        text-align: right
+
+    fieldset
+        margin-bottom: 50px
+
+    input[type="text"].ng-invalid.ng-dirty, input[type="email"].ng-invalid.ng-dirty
+        border: 1px solid red !important
+
+    .form-group span
+        font-size: 12px
+        margin-top: -10px
+        display: block
+        color: red
+        position: absolute
+
+    input[required]
+        background: image-url("required-field.jpg") no-repeat top right
+
+    input[disabled="disabled"]
+        background: #ccc
+        cursor: default
+
+
+/* ----- BLOG ----- */
+.blog article
+    border-bottom: 1px solid $clrBright
+    margin-bottom: 30px

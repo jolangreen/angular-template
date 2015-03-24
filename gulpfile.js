@@ -37,7 +37,7 @@ gulp.task('scripts', function() {
 // Compile Sass using compass
 gulp.task('styles', function() {
    return gulp.src('sass/*.scss')
-     .pipe(compass({ config_file: './config.rb', css: '', sass: 'sass' }))
+     .pipe(compass({ config_file: './config.rb', css: 'assets/css', sass: 'sass' }))
      .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
      .pipe(livereload())
      .pipe(rename({suffix: '.min'}))
@@ -60,6 +60,13 @@ gulp.task('bowerfonts', function() {
 });
 
 
+gulp.task('iescripts', function() {
+    return gulp.src(['js/IE8_fixes/*.js'])
+    .pipe(concat('ie_scripts.js'))
+    .pipe(gulp.dest('./assets/js/ie8_fixes'));
+});
+
+
 // Clean. Delete and replace all files in the destination folder.
 gulp.task('clean', function() {
   return gulp.src(['assets/css', 'assets/js', 'assets/images', 'assets/fonts'], {read: false})
@@ -67,11 +74,11 @@ gulp.task('clean', function() {
 });
 
 
-
 // Default task
 gulp.task('default', ['clean'], function() {
-    gulp.start('images', 'scripts',  'styles', 'bowerstyles', 'bowerfonts');
+    gulp.start('images', 'scripts',  'styles', 'bowerstyles', 'bowerfonts', 'iescripts');
 });
+
 
 
 // Watch
@@ -95,6 +102,6 @@ gulp.task('watch', function() {
   });
 
   livereload.listen();
-  gulp.watch('sass/**', 'assets/css/*', 'assets/js/*').on('change', livereload.changed);
+  gulp.watch(['sass/**', 'assets/css/*', 'assets/js/*']).on('change', livereload.changed);
 
 });

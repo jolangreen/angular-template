@@ -3,30 +3,42 @@
         <h1>Contact</h1>
         <div class="row">
             <div class="col-md-6" ng-controller="ContactController">
-                <form id="contactform" name="contactform" method="post" action="#/contact" novalidate>
+                <form ng-submit="submit(contactform)" id="contactform" name="contactform" method="post" action="" role="form" novalidate>
                     <div class="form-group">
-                        <input type="text" id="name" name="name" ng-model="user.name" ng-minlength="3" required placeholder="Name">
-                        <span ng-show="contactform.name.$dirty && contactform.name.$error.name">Enter a full name</span>
+                        <input type="text" id="inputName" name="inputName" ng-model="formData.inputName" ng-minlength="3" placeholder="Name" required>
+                        <span class="help-block" ng-show="contactform.inputName.$error.minlength">Enter a full name</span>
                     </div>
                     <div class="form-group">
-                        <input type="email" id="email" name="email" ng-model="user.email" required  placeholder="Email">
-                        <span ng-show="contactform.email.$error.email">Not an email</span>
+                        <input type="email" id="inputEmail" name="inputEmail" ng-model="formData.inputEmail" placeholder="Email" required>
+                        <span class="help-block" ng-show="contactform.inputEmail.$error.email">Not an email</span>
                     </div>
                     <div class="form-group">
-                        <input type="text" id="phone" name="phone" ng-model="user.phone" ng-pattern="/^[0-9.-]{7,14}$/" required placeholder="Phone">
-                        <span ng-show="contactform.phone.$dirty && contactform.phone.$error.pattern">Enter a phone number</span>
+                        <input type="text" ng-model="formData.inputPhone" id="inputPhone" name="inputPhone" ng-pattern="/^[0-9.-]{7,14}$/" placeholder="Phone" required>
+                        <span class="help-block" ng-show="contactform.inputPhone.$dirty && contactform.inputPhone.$error.pattern">Enter a phone number</span>
                     </div>
                     <div class="form-group">
-                        <input type="text" id="fax" name="fax">
+                        <input type="text" ng-model="formData.inputCompany" id="inputCompany" name="inputCompany" placeholder="Company">
                     </div>
                     <div class="form-group">
-                        <textarea name="" id="" placeholder="Message"></textarea>
+                        <select name="inputSelect" id="inputSelect" ng-model="formData.inputSelect">
+                            <option value="Mike Jones">Mike Jones</option>
+                            <option value="Paul Wall">Paul Wall</option>
+                            <option value="Slim Thug">Slim Thug</option>
+                        </select>
                     </div>
-                    <input id="submit" name="submit" type="submit" value="Submit" ng-disabled="contactform.$invalid" class="">
+                    <div class="form-group">
+                        <textarea ng-model="formData.inputMessage" id="inputMessage" name="inputMessage" placeholder="Message"></textarea>
+                    </div>
+                    <input id="submit" name="submit" type="submit" value="Submit" ng-disabled="submitButtonDisabled" class="pull-right">
                 </form>
+
+                <div class="clear"></div>
+                <div class="success-box">
+                    <p ng-class="result">{{ resultMessage }}</p>
+                </div>
             </div>
             <div class="col-md-6">
-                <h3>Contact form</h3>
+                <h3>Get in touch with us</h3>
                 <hr>
 
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, dolor eligendi veniam illum facere molestiae cumque quia earum praesentium provident.</p>

@@ -23,8 +23,10 @@ var myApp = angular.module('myApp', ['ngRoute', 'ui.bootstrap']);
  * $routeProvider is a service from ngRoute module that is responsible
  * for managing the routes in your project
  */
-myApp.config(['$routeProvider', function($routeProvider){
+myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
 
+    $locationProvider.html5Mode(false).hashPrefix('!');
+    
     $routeProvider
     .when('/', {
         templateUrl: 'views/home.html',
@@ -40,7 +42,7 @@ myApp.config(['$routeProvider', function($routeProvider){
     })
     .when('/contact', {
         templateUrl: 'views/contact.html',
-        controller : 'UsersController'
+        controller : 'ContactController'
     })
     .otherwise({
         redirectTo: '/'

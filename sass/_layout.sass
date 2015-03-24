@@ -1,37 +1,8 @@
 
-/* ==========================================================================
-   Global
-   ========================================================================== */
-
-body
-    background: $clrBackground
-    padding: 0px
-    font-family: $fontPrimary
-    color: $clrText
-    font-size: 14px
-
-a, a:visited
-    color: $clrPrimary
-    text-decoration: none
-    +transition(all 0.2s ease-in-out)
-
-a:hover, a:focus, a:active
-    color: $clrSecondary
-    text-decoration: none
-
-hr
-    margin: 15px 0
-    border: 0
-    border-bottom: 1px solid $clrBright
-
-.img-fit img
-    width: 100%
-
 
 /* ==========================================================================
    Header
    ========================================================================== */
-
 .home header
     background: transparent 
     
@@ -57,8 +28,9 @@ header
             height: 50px
             background: image-url("logo.png") no-repeat
             
-
-// NAVIGATION ----------------------------->
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
 nav.navbar
     margin-bottom: 0
     padding: 7px 0 4px
@@ -141,86 +113,6 @@ nav.navbar
             li:hover > ul, li:hover > ul
                 display: block
                 
-/* ==========================================================================
-   Banner
-   ========================================================================== */
-
-#main #banner
-    overflow: hidden
-    position: relative
-    padding: 0
-    margin-top: -95px
-
-
-.carousel
-
-    .container
-        position: relative
-        z-index: 9
-
-    .down-button
-        position: absolute
-        bottom: 40px
-        left: 47.5%
-        z-index: 10
-        width: 80px
-        height: 80px
-        line-height: 80px
-        font-size: 30px
-        color: $clrBrightest
-
-    .item
-        height: 700px
-
-        img
-            position: absolute
-            top: 0
-            left: 0
-            min-width: 100%
-            height: 100%
-
-    .carousel-caption
-        background-color: transparent
-        width: 600px
-        margin: 0 auto
-        top: 20%
-
-        h1, .carousel-caption p
-            margin: 0
-            line-height: 1.25
-            color: #fff
-            text-shadow: 0 1px 1px rgba(0,0,0,.4)
-
-        h1
-            font-size: 50px
-        p
-            font-size: 22px
-        a.btn
-            padding: 10px 20px
-            font-size: 20px
-            text-transform: uppercase
-            background-color: transparent
-            border: 2px solid $clrBrightest
-            color: $clrBrightest
-            margin-top: 15px
-
-
-    .carousel-control
-        z-index: 5
-
-        .glyphicon-chevron-left, .glyphicon-chevron-right
-            top: 44%
-            background: $clrDarkest
-            height: 80px
-            width: 50px
-            line-height: 77px
-            color: $clrBrightest
-
-        .glyphicon-chevron-left
-            left: 0
-        .glyphicon-chevron-right
-            right: 0
-
 
 /* Page Heading */
 .page-intro
@@ -241,13 +133,7 @@ nav.navbar
     .col-md-6 h1
         margin-bottom: 0
 
-.breadcrumb
-    background: transparent
-    line-height: 40px
-    margin-bottom: 0
-
-
-
+        
 /* ==========================================================================
    Main Body, Content Area
    ========================================================================== */
@@ -257,46 +143,6 @@ nav.navbar
 
 .main-body
     padding: 40px 0
-// .primary, .secondary
-
-
-.secondary
-    aside
-        margin-bottom: 30px
-    h3
-        color: $clrText
-        margin-bottom: 5px
-    ul
-        padding-left: 0
-        margin-left: 0
-        margin-bottom: 35px
-    ul li
-        list-style: none
-        border-bottom: 1px solid $clrBright
-        line-height: 40px
-        margin-bottom: 0
-        a
-            color: $clrText
-            &:hover
-                color: $clrPrimary
-                text-decoration: none
-
-        &.current_page_item > a,
-        &.current_page_ancestor > a,
-        &.current-menu-item > a,
-        &.current-menu-ancestor > a
-            color: $clrPrimary
-
-        ul ul li
-            border-bottom: none
-            line-height: 30px
-            padding-left: 20px
-
-    // li:before
-    //     font-family: 'FontAwesome'
-    //     content: '\f105'
-    //     margin: 0 10px 0 -15px
-
 
 
 
