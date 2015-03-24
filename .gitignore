@@ -1,5 +1,10 @@
 .sass-cache
 .DS_Store
+.DS_Store?
+._*
+.Trashes
 bower_components
 node_modules
 code_samples
+assets
+sftp-config.json
