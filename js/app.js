@@ -14,7 +14,7 @@
  * Angular Team have created a separate module for that called ngRoute, and if we want
  * to define routes in our application we need to include that dependency.
  */
-var myApp = angular.module('myApp', ['ngRoute']);
+var myApp = angular.module('myApp', ['ngRoute', 'ui.bootstrap']);
 
 
 /**

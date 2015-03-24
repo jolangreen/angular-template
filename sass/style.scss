@@ -15,10 +15,27 @@ $clrDarkest: #111;
 $fontPrimary: 'robotoregular', Arial, Helvetica, Sans-serif;
 $fontSecondary: 'HelveticaNeueThin', Arial, Helvetica, Sans-serif;
 
+@mixin position($top, $right, $bottom, $left, $pos: absolute) {
+    position: $pos;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+//+position(10px, 0, 0, 2px)
+
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+@mixin border($side, $color) {
+    border-#{$side}: 1px solid $color;
+}
+
 @import "compass/css3";
 @import "reset";
 @import "typography";
 @import "layout";
 @import "page-elements";
 @import "responsive";
-
