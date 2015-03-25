@@ -33,6 +33,12 @@ $fontSecondary: 'HelveticaNeueThin', Arial, Helvetica, Sans-serif;
     border-#{$side}: 1px solid $color;
 }
 
+//Screen Sizes
+$screen-xs: 320px;
+$screen-sm: 360px;
+$screen-md: 769px;
+$screen-lg: 1024px;
+
 @import "compass/css3";
 @import "reset";
 @import "typography";
