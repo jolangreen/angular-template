@@ -15,6 +15,13 @@ $clrDarkest: #111;
 $fontPrimary: 'robotoregular', Arial, Helvetica, Sans-serif;
 $fontSecondary: 'HelveticaNeueThin', Arial, Helvetica, Sans-serif;
 
+//Screen Sizes
+$screen-xs: 320px;
+$screen-sm: 767px; // All mobile devices
+$screen-md: 992px; // Desktop / Tablet
+$screen-lg: 1200px;
+
+
 @mixin position($top, $right, $bottom, $left, $pos: absolute) {
     position: $pos;
     top: $top;
@@ -33,11 +40,23 @@ $fontSecondary: 'HelveticaNeueThin', Arial, Helvetica, Sans-serif;
     border-#{$side}: 1px solid $color;
 }
 
-//Screen Sizes
-$screen-xs: 320px;
-$screen-sm: 360px;
-$screen-md: 769px;
-$screen-lg: 1024px;
+
+$root-font-size: 16px;
+@mixin font($size, $line-height: null, $weight: null) {
+  font-size: $size; // IE fix
+  font-size: ($size / $root-font-size) * 1rem;
+  @if $line-height != null {
+    line-height: $line-height;
+  }
+  @if $weight != null {
+    font-weight: $weight;
+  }
+}
+
+// Usage example:
+// p {
+//  +font(24px, 1.25, bold)
+//}
 
 @import "compass/css3";
 @import "reset";
